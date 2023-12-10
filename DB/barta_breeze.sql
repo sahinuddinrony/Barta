@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2023 at 02:35 PM
+-- Generation Time: Dec 10, 2023 at 03:31 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -43,15 +43,18 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `uuid`, `comment`, `view_count`, `user_id`, `post_id`, `created_at`, `updated_at`) VALUES
-(1, 'fad63365-4fb2-4595-9eea-4a05ddd7bc3f', '২০২৩ সালের নির্বাচন নিয়ে সবাই উদ্বেগে', 0, 1, 2, '2023-12-04 09:11:57', '2023-12-04 09:11:57'),
-(2, '3020ed32-6b6d-4120-a26e-ef95e03de894', '২০২৩ নির্বাচন আমারও উদ্বেগ আসে ।', 0, 3, 2, '2023-12-04 23:16:11', '2023-12-04 23:16:11'),
-(3, 'a24fb7ee-eb24-4667-8610-82cf4093568a', 'আমি আব্দুল্লাহ বলছি ২০২৩ নির্বাচন আমারও উদ্বেগ আসে ।', 0, 2, 2, '2023-12-04 23:27:09', '2023-12-04 23:27:09'),
-(4, '50e8c539-7431-41c3-82be-121751b5367d', 'আমি Abu Taher বলছি ২০২৩ নির্বাচন আমারও উদ্বেগ আসে ।', 0, 5, 2, '2023-12-05 00:36:20', '2023-12-05 00:36:20'),
-(5, '69c53f08-72ae-40e5-8aa7-69bcd78099c3', 'আমি Reahajul Islam Ripon বলছি ২০২৩ নির্বাচন আমারও উদ্বেগ আসে ।', 0, 4, 2, '2023-12-05 00:39:35', '2023-12-05 00:39:35'),
-(6, '1b1c2f30-97ad-41fc-94e8-ae8633562b4a', 'Really very nice day !', 0, 4, 1, '2023-12-05 00:49:08', '2023-12-05 00:49:08'),
-(7, 'c4d0746d-937a-4986-bc2a-bb73a7604552', 'Abdullah\'s profile comment just edited', 0, 2, 8, '2023-12-05 04:55:38', '2023-12-05 04:55:38'),
-(8, 'c69c3e35-b93c-4c37-9356-6cf31ca24532', 'জাতিসংঘের হস্তক্ষেপ অত্যন্ত গুরুত্বপূর্ণ।', 0, 1, 2, '2023-12-05 05:09:59', '2023-12-05 05:09:59'),
-(9, 'c0331787-a821-4509-ac03-d1bbe825629c', 'খুবই সত্যি কথা। খুবই সত্যি কথা।', 0, 1, 7, '2023-12-05 05:14:45', '2023-12-05 05:14:45');
+(2, '680471a1-5fdc-497d-af19-e5258cf99f08', 'my this is update', 0, 1, 2, '2023-12-06 08:52:18', '2023-12-06 08:52:18'),
+(4, '9b2717b6-ce3d-4f08-beb6-48c4a62e1866', 'again comment post', 0, 1, 2, '2023-12-06 09:40:16', '2023-12-06 09:40:16'),
+(5, '42a3ddc1-4721-4ac8-8e0d-f8fa86c7702e', 'hi this my post', 0, 1, 24, '2023-12-09 07:34:10', '2023-12-09 07:34:10'),
+(6, 'b33f9c2c-eb8d-4dd2-9708-ce981c6609f7', 'يَا أَيُّهَا الَّذِينَ آمَنُوا ادْخُلُوا فِي السِّلْمِ كَافَّةً وَلَا تَتَّبِعُوا خُطُوَاتِ الشَّيْطَانِ إِنَّهُ لَكُمْ عَدُوٌّ مُبِينٌ', 0, 5, 25, '2023-12-09 21:27:25', '2023-12-09 21:27:25'),
+(7, '1d3a7ce7-53dc-4c66-b502-093da3846e51', 'This is arabic post', 0, 5, 25, '2023-12-09 21:40:49', '2023-12-09 21:40:49'),
+(8, '079177c7-e19b-4abb-a968-1479b74a2674', 'Jack Fruit is my national fruit', 0, 5, 21, '2023-12-09 21:45:53', '2023-12-09 21:45:53'),
+(9, 'ec1da041-5f72-4b37-b149-64a670341ab2', 'Jack Fruit is my fevorate', 0, 3, 21, '2023-12-09 22:14:59', '2023-12-09 22:14:59'),
+(10, '91cb9958-2045-4b89-bd88-788c54e6e602', 'Jack Fruit also my favorate', 0, 2, 21, '2023-12-09 22:17:55', '2023-12-09 22:17:55'),
+(11, 'd0ee9600-2d4e-4d97-863e-7d26018e478a', 'Really awasome fruit', 0, 1, 21, '2023-12-09 22:19:26', '2023-12-09 22:19:26'),
+(12, '1f9e9209-bc40-45cb-ab32-695c8c6831c9', 'জোরদার করার আহ্বান জানিয়েছে।', 0, 1, 11, '2023-12-09 22:26:23', '2023-12-09 22:26:23'),
+(13, '3bc74967-77cc-4e17-ad29-fe898f7193b1', 'jhbkbnk', 0, 1, 21, '2023-12-10 02:57:41', '2023-12-10 02:57:41'),
+(15, '53380602-16af-49bb-9986-590ee2675a65', 'No image profile post', 0, 4, 21, '2023-12-10 05:54:01', '2023-12-10 05:54:01');
 
 -- --------------------------------------------------------
 
@@ -68,6 +71,48 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `media`
+--
+
+CREATE TABLE `media` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `model_type` varchar(255) NOT NULL,
+  `model_id` bigint(20) UNSIGNED NOT NULL,
+  `uuid` char(36) DEFAULT NULL,
+  `collection_name` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `file_name` varchar(255) NOT NULL,
+  `mime_type` varchar(255) DEFAULT NULL,
+  `disk` varchar(255) NOT NULL,
+  `conversions_disk` varchar(255) DEFAULT NULL,
+  `size` bigint(20) UNSIGNED NOT NULL,
+  `manipulations` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`manipulations`)),
+  `custom_properties` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`custom_properties`)),
+  `generated_conversions` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`generated_conversions`)),
+  `responsive_images` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`responsive_images`)),
+  `order_column` int(10) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `media`
+--
+
+INSERT INTO `media` (`id`, `model_type`, `model_id`, `uuid`, `collection_name`, `name`, `file_name`, `mime_type`, `disk`, `conversions_disk`, `size`, `manipulations`, `custom_properties`, `generated_conversions`, `responsive_images`, `order_column`, `created_at`, `updated_at`) VALUES
+(13, 'App\\Models\\Post', 21, 'f16a172a-c06c-48b0-83be-30f541d44a02', 'default', 'fruit-1', 'fruit-1.jpg', 'image/jpeg', 'public', 'public', 28571, '[]', '[]', '[]', '[]', 1, '2023-12-09 02:58:03', '2023-12-09 02:58:03'),
+(15, 'App\\Models\\User', 1, '697a8cae-8b23-48f6-afae-fcb6ccff9729', 'default', 'Sahin Uddin Rony p', 'Sahin-Uddin-Rony-p.jpg', 'image/jpeg', 'public', 'public', 362232, '[]', '[]', '[]', '[]', 1, '2023-12-09 03:05:22', '2023-12-09 03:05:22'),
+(18, 'App\\Models\\Post', 24, 'b1c677f0-b707-49af-9527-4fb0c559bfab', 'default', 'expensive car 4', 'expensive-car-4.jpg', 'image/jpeg', 'public', 'public', 156140, '[]', '[]', '[]', '[]', 1, '2023-12-09 04:56:43', '2023-12-09 04:56:43'),
+(20, 'App\\Models\\Post', 15, '7f6aef01-1d1d-40a2-bf92-da0a52e9521c', 'default', 'dragon', 'dragon.jpg', 'image/jpeg', 'public', 'public', 34168, '[]', '[]', '[]', '[]', 1, '2023-12-09 07:33:07', '2023-12-09 07:33:07'),
+(21, 'App\\Models\\Post', 25, '7fbf41bf-7f86-4dbb-9021-e29aa13acbbe', 'default', 'Mandarina', 'Mandarina.jpg', 'image/jpeg', 'public', 'public', 84885, '[]', '[]', '[]', '[]', 1, '2023-12-09 21:26:23', '2023-12-09 21:26:23'),
+(22, 'App\\Models\\User', 5, 'c30a3bac-d747-4cd2-b4a2-f82030f2eaf5', 'default', 'keramot', 'keramot.jpg', 'image/jpeg', 'public', 'public', 86440, '[]', '[]', '[]', '[]', 1, '2023-12-09 22:10:17', '2023-12-09 22:10:17'),
+(23, 'App\\Models\\User', 3, '9cea5b4e-536f-485c-8fc8-81ae03677b00', 'default', 'rihazul islam', 'rihazul-islam.jpg', 'image/jpeg', 'public', 'public', 168867, '[]', '[]', '[]', '[]', 1, '2023-12-09 22:12:55', '2023-12-09 22:12:55'),
+(24, 'App\\Models\\User', 2, 'ed146624-1661-4f17-9dad-36ae9fc10226', 'default', 'azizul', 'azizul.jpg', 'image/jpeg', 'public', 'public', 662579, '[]', '[]', '[]', '[]', 1, '2023-12-09 22:17:04', '2023-12-09 22:17:04'),
+(26, 'App\\Models\\Post', 3, 'e260278e-e15e-4adf-8e4a-723921db24d7', 'default', 'banana', 'banana.jpeg', 'image/jpeg', 'public', 'public', 4222, '[]', '[]', '[]', '[]', 1, '2023-12-10 06:32:17', '2023-12-10 06:32:17');
 
 -- --------------------------------------------------------
 
@@ -91,7 +136,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2023_12_04_013028_create_posts_table', 1),
-(6, '2023_12_04_013418_create_comments_table', 1);
+(6, '2023_12_04_013418_create_comments_table', 1),
+(7, '2023_12_08_011113_create_media_table', 2);
 
 -- --------------------------------------------------------
 
@@ -145,14 +191,15 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `uuid`, `user_id`, `description`, `view_count`, `created_at`, `updated_at`) VALUES
-(1, '848a0106-193c-414e-9132-af1fb18ec29d', 1, 'আজ রবিবার দিনটি খুবই সুন্দর', 3, '2023-12-04 09:07:47', '2023-12-04 09:07:47'),
-(2, 'c6dd2c1b-6393-452f-9364-e994c15f6d39', 1, 'নির্বাচন নিয়ে উদ্বেগের পাশাপাশি, দেশের অভ্যন্তরে চলমান মানবাধিকার লঙ্ঘন মোকাবেলা করার জন্য একটি শক্তিশালী মেকানিজম প্রতিষ্ঠার জন্য চাপ দেয়া প্রয়োজন। মানবাধিকার সুরক্ষা, মত প্রকাশের স্বাধীনতা এবং প্রতিশোধের ভয় ছাড়াই গণতান্ত্রিক প্রক্রিয়ায় অংশগ্রহণের অধিকার নিশ্চিত করতে জাতিসংঘের হস্তক্ষেপ অত্যন্ত গুরুত্বপূর্ণ। যে কোনো জাতির সার্বিক উন্নয়নের জন্য একটি সুষ্ঠু ও গণতান্ত্রিক ব্যবস্থা অপরিহার্য। তাই আমি অবিলম্বে নিম্নোক্ত বিষয়ে পদক্ষেপ নেয়ার জন্য', 10, '2023-12-04 09:10:43', '2023-12-04 09:10:43'),
-(3, '6d52d006-9646-4eb0-9362-ebfe8ce62b69', 3, 'হলফনামায় লেখা তথ্য বিশ্লেষণ করে দেখা যায়, অস্থাবর সম্পদ হিসেবে সাকিব ব্যাংকে জমা দেখিয়েছেন ১১ কোটি ৫৬ লাখ ৯৯ হাজার টাকা। এ ছাড়া ২৪ হাজার ২৬১ মার্কিন ডলার বৈদেশিক মুদ্রা থাকার তথ্যও সাকিব দিয়েছেন। বন্ড, ঋণপত্র ও শেয়ার বাজারে সাকিবের ৪৩ কোটি ৬৩ লাখ টাকা বিনিয়োগ আছে। সোনা আছে ২৫ ভরি। তিনি আসবাবপত্র ও ইলেকট্রনিকসামগ্রী দেখিয়েছেন ১৩ লাখ টাকার।', 1, '2023-12-04 10:13:29', '2023-12-04 10:13:29'),
-(4, 'cc01ca18-fd56-47dc-a8e1-ffb1211a93db', 3, 'এই ধরনের কাজের মধ্যে নির্বাচনী প্রক্রিয়া নষ্ট করা বা নির্বাচনে কারচুপি, ভোটারদের ভোটাধিকার থেকে বঞ্চিত করা বা ভোটাধিকার প্রয়োগ করতে বাধা দেওয়া, রাজনৈতিক বিরোধী দলের সদস্যদের নির্বাচনী প্রক্রিয়া থেকে বাদ দেওয়া; গণতান্ত্রিক, শাসন, বা মানবাধিকার সংক্রান্ত কর্মকাণ্ড পরিচালনায় নিয়োজিত নাগরিক সমাজের সংগঠনগুলোর ক্ষমতা সীমিত করা; ভোটার, নির্বাচনী পর্যবেক্ষক বা নাগরিক সমাজের সংগঠনগুলোকে হুমকি কিংবা শারীরিক সহিংসতার মাধ্যমে ভয় দেখানোর মতো বিষয় অন্তর্ভুক্ত থাকতে পারে।', 3, '2023-12-04 23:19:20', '2023-12-04 23:19:20'),
-(5, '3ae798da-930b-41c5-b721-b96065dee423', 2, 'আল্লাহ তাআলা অবশ্যই তাঁর দ্বীন এবং মুমিন বান্দাদের সাহায্য করবেন। আল্লাহ তাআলা বলেন, ‘আমি অবশ্যই আবশ্যক করেছি যে, আমি এবং আমার রাসূলগণ অবশ্যই বিজয়ী হবেন। নিশ্চয় তিনি শক্তিধর পরাক্রমশালী। তিনি আরও বলেন, আমি সাহায্য করব রাসূলগণকে, ইহকালে যারা ঈমান এনেছে তাদেরকে ও সাক্ষীদের দণ্ডায়মান হওয়ার দিন’ (গাফির, ৪০/৫১)। ‘হে রাসূল! আপনি কাফেরদের বলুন, তোমরা শীঘ্রই পরাজিত হবে এবং জাহান্নামে তোমাদেরকে একত্রিত করা হবে। সেটা কতই না নিকৃষ্ট আবাসস্থল!’ (আল ইমরান, ৩/১২)।', 2, '2023-12-04 23:22:25', '2023-12-04 23:22:25'),
-(6, 'f61a6edc-051a-400a-b9fe-94dcefeabb72', 5, '‘হে ঈমানদারগণ! তোমাদের কি হলো, যখন আল্লাহর পথে বের হবার জন্য তোমাদের বলা হয়, তখন মাটি জড়িয়ে ধরো, তোমরা কি আখেরাতের পরিবর্তে দুনিয়ার জীবনে পরিতুষ্ট হয়ে গেলে? অথচ আখেরাতের তুলনায় দুনিয়ার জীবনের উপকরণ অতি অল্প’ (আত-তওবা, ৯/৩৮)।', 3, '2023-12-05 00:35:23', '2023-12-05 00:35:23'),
-(7, '49c57d1a-7c41-4c15-9b3d-5e3a4a1bbb8f', 4, 'মুসলিমদের ভবিষৎ সাফল্য নিশ্চিত যদিও কাফেররা তা অপছন্দ করে। \r\nএটা খুবই সত্যি কথা।', 7, '2023-12-05 00:38:42', '2023-12-05 00:38:42'),
-(8, '644cb8fe-93fe-4538-9777-6e5c01744530', 2, 'This post from Abdullah Profile', 9, '2023-12-05 03:48:11', '2023-12-05 03:48:11');
+(2, 'bff308ca-b7d4-4188-99ed-86b3a0f13807', 1, 'কথা বলতে বলতে প্রকাশ্যে কেঁদে দিলেন উত্তর কোরিয়ার প্রেসিডেন্ট কিম জং উন। তার সেই কান্নার ভিডিও এরইমধ্যে ইন্টারনেটে ব্যাপকভাবে ভাইরাল হয়েছে।', 14, '2023-12-06 08:49:24', '2023-12-06 09:40:16'),
+(3, '7282d70b-7f9f-4a4c-9681-5b17b924cfd4', 1, 'Putin makes rare trip to Middle East to meet with UAE and Saudi leaders', 0, '2023-12-06 20:41:51', '2023-12-06 20:41:51'),
+(10, 'a52ebe30-1c9d-43da-82ae-5c42856bc23f', 2, 'এই নতুন বৈশ্বিক শ্রম কৌশলটি সমস্ত মার্কিন সরকারি সংস্থাগুলোকে সরকার, শ্রম সংগঠন, ট্রেড ইউনিয়ন, সুশীল সমাজ এবং বেসরকারি খাতের সঙ্গে সংগঠন এবং সম্মিলিত দরকষাকষির স্বাধীনতার অধিকার প্রচার ও সুরক্ষার জন্য সম্পৃক্ততা জোরদার করার আহ্বান জানিয়েছে।', 1, '2023-12-07 06:02:38', '2023-12-07 06:10:18'),
+(11, 'ddca1ed8-ef7d-4ca5-b485-ebaa4a497d5c', 3, 'সম্মিলিত দরকষাকষির স্বাধীনতার অধিকার প্রচার ও সুরক্ষার জন্য সম্পৃক্ততা জোরদার করার আহ্বান জানিয়েছে।', 3, '2023-12-07 06:10:31', '2023-12-10 05:20:53'),
+(12, '51f66fc2-399d-4bd2-bfae-f1db6f087e8d', 4, 'আজ ফেলে আসা সেই মহান মনীষীগণের আক্বীদা জগতের একটি অংশ তাওহীদ ও আসমা ওয়াছ ছিফাতের ক্ষেত্রে কী খিদমত শুধু সেই বিষয়টি ফুটিয়ে তোলার চেষ্টা করব ইনশা-আল্লাহ। ওমা তাওফীক্বী ইল্লা বিল্লাহ।', 2, '2023-12-07 19:23:32', '2023-12-10 05:21:06'),
+(15, '14a85694-e061-4233-9cfa-dec9e0301fff', 1, 'Green car name', 4, '2023-12-07 22:47:13', '2023-12-09 22:21:04'),
+(21, '3ce60212-740e-4624-b7c4-c6b6987236f0', 1, 'This is Jack Fruit', 32, '2023-12-09 00:57:06', '2023-12-10 05:54:21'),
+(24, '351a782b-f0a5-4f3f-a8fe-ec352320aba3', 5, 'ডজন ডজন বইয়ের থেকে প্রয়োজনীয় এক হালি বই শ্রেয়', 7, '2023-12-09 03:32:11', '2023-12-10 04:32:35'),
+(25, 'e8d4cb0e-3a35-41eb-a77a-0804f332a19b', 5, 'হে ঈমানদারগণ! তোমরা পরিপূর্ণভাবে ইসলামে প্রবেশ করো। আর শয়তানের পদাঙ্কসমূহের অনুসরণ করো না। নিশ্চয়ই শয়তান তোমাদের প্রকাশ্য শত্রু’ (আল-বাক্বারা, ২/২০৮)।', 20, '2023-12-09 21:25:15', '2023-12-10 05:54:30');
 
 -- --------------------------------------------------------
 
@@ -179,11 +226,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `username`, `email`, `password`, `bio`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Sahin Uddin', 'Rony', 'sahincseiu', 'sahincseiu@gmail.com', '$2y$12$im1PtK4SZw6I2DTmVigg6.2oCdONtzz97bVvN7i5U2qjL7TokP2Im', 'শাহিন উদ্দিন প্রোফাইল এটাঃঃ>', NULL, NULL, '2023-12-04 09:00:45', '2023-12-04 09:00:45'),
-(2, 'Abdullah Bin', 'Sahin', 'abdullahsahin', 'abdullah@gmail.com', '$2y$12$RR.QnraHMeH7wjVwwpmfpu8aQCq5Vc1Ht1AaZeW.LLMEzMNnW9S3e', NULL, NULL, NULL, '2023-12-04 09:02:58', '2023-12-04 09:02:58'),
-(3, 'Rony', 'Ahmed', 'ronycse', 'rony@gmail.com', '$2y$12$U2o489NG3UjYxS3JpHtTDe7qFnigZwM5cP7BEd36vXU4tIlkHV.hW', NULL, NULL, NULL, '2023-12-04 09:03:48', '2023-12-04 09:03:48'),
-(4, 'Rehajul', 'Islam', 'ripon', 'riponcv@gmail.com', '$2y$12$POEvcE0ZjJn5lViYFCsljeP5l0miRH/cSR8J6oV.0LDMyyZ4kV4qW', NULL, NULL, NULL, '2023-12-04 09:04:43', '2023-12-04 09:04:43'),
-(5, 'Abu Taher', 'Moniruzzaman', 'moniruzzaman', 'abutaher@gmail.com', '$2y$12$TwrxkCHhUUY6QLH2KXihmO.RE1ynZ0cNv5zDjgYOznPTOuWpxdnee', NULL, NULL, NULL, '2023-12-04 09:06:21', '2023-12-04 09:06:21');
+(1, 'Sahin Uddin', 'Rony', 'sahincseiu', 'sahincseiu@gmail.com', '$2y$12$yXQKcGSesZlk43y6rsQPjOFhND6SNe3ivQjb3dIkdUR7ukRTManc2', 'Well come to my photo', NULL, NULL, '2023-12-06 07:54:10', '2023-12-09 03:05:22'),
+(2, 'Azizul', 'Islam', 'abdullah19', 'azizul@gmail.com', '$2y$12$ElNcC57jAsDEjVcBbDncw.hL5aJrlassnQGrt0uH1rFs8bmsBRRF6', 'Azizul Profile', NULL, NULL, '2023-12-07 06:01:44', '2023-12-09 22:17:04'),
+(3, 'Ripon', 'Islam', 'ripon2000', 'riponcv@gmail.com', '$2y$12$MSGyl2sWtrxN.r7k1HEEC.oMep9TJdj/V7AvyHd0WW0u3/rc0BUD.', 'This Rihazul Islam Ripon Bio', NULL, NULL, '2023-12-07 06:10:00', '2023-12-09 22:12:55'),
+(4, 'Rony', 'Ahmed', 'ronycse', 'rony@gmail.com', '$2y$12$l2A9C8IrxFHTPATxxLEqgu8GOFa1qqyv/iB8.YV/8QRMdsugi0PNe', NULL, NULL, NULL, '2023-12-07 19:17:53', '2023-12-07 19:17:53'),
+(5, 'Keramot Ali', 'Molla', 'keramot', 'keramot@gmail.com', '$2y$12$dty5/Z1eklFYyfSr8bixRO.qx2lZGrOZpX/EGlw6fcgBQXG0M7zcK', 'Tomoto Bio Update', NULL, NULL, '2023-12-09 03:29:42', '2023-12-09 05:01:25');
 
 --
 -- Indexes for dumped tables
@@ -204,6 +251,15 @@ ALTER TABLE `comments`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `media`
+--
+ALTER TABLE `media`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `media_uuid_unique` (`uuid`),
+  ADD KEY `media_model_type_model_id_index` (`model_type`,`model_id`),
+  ADD KEY `media_order_column_index` (`order_column`);
 
 --
 -- Indexes for table `migrations`
@@ -230,7 +286,8 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `posts_uuid_unique` (`uuid`);
+  ADD UNIQUE KEY `posts_uuid_unique` (`uuid`),
+  ADD KEY `posts_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -248,7 +305,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -257,10 +314,16 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `media`
+--
+ALTER TABLE `media`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -272,7 +335,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -288,8 +351,14 @@ ALTER TABLE `users`
 -- Constraints for table `comments`
 --
 ALTER TABLE `comments`
-  ADD CONSTRAINT `comments_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`),
-  ADD CONSTRAINT `comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `comments_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `posts`
+--
+ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
