@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('view_sigle_post')
@@ -19,11 +18,9 @@
                             <!--                </div>-->
 
                             <div class="py-4 text-gray-700 font-normal space-y-2">
-                                <img
-                                  src="{{ $post->user->getFirstMediaUrl() }}" alt="{{ $post->user->name }}"
-                                  class="h-10 w-10 rounded-full object-cover"
-                                  alt="" >
-                              </div>
+                                <img src="{{ $post->user->getFirstMediaUrl() }}" alt="{{ $post->user->name }}"
+                                    class="h-10 w-10 rounded-full object-cover" alt="">
+                            </div>
                             <!-- /User Avatar -->
 
                             <!-- User Info -->
@@ -37,7 +34,8 @@
                                     class="font-semibold">
                                     <span
                                         class="hover:underline text-gray-900 flex flex-col min-w-0 flex-1">{{ $post->user->name }}</span>
-                                    <span class=" text-sm text-gray-500 line-clamp-1">{{ '@' . $post->user->username }}</span>
+                                    <span
+                                        class=" text-sm text-gray-500 line-clamp-1">{{ '@' . $post->user->username }}</span>
                                 </a>
 
 
@@ -106,17 +104,25 @@
 
                 <div class="py-4 text-gray-700 font-normal">
                     <p>
+                    <div class="py-4 text-gray-700 font-normal space-y-2">
+                        @if ($post->getFirstMediaUrl())
+                            <img src="{{ $post->getFirstMediaUrl() }}" alt=""
+                                class="min-h-auto w-full rounded-lg object-cover max-h-64 md:max-h-72" />
+                        @endif
+                        {{-- <p>Beautiful 😍😘 Innit?</p> --}}
+                    </div>
 
-                        {{ $post->description }}
-                        <br />
+                    {{ $post->description }}
+                    <br />
 
-                        <a href="#laravel" class="text-black font-semibold hover:underline">#Laravel</a>
-                        <br />
-                        <br />
+                    <a href="#laravel" class="text-black font-semibold hover:underline">#Laravel</a>
+                    <br />
+                    <br />
                     <p><a href="{{ route('home') }}">Back to Home Feed</a></p>
                     {{-- <p><a href="{{ route('home', ['username' => $post->single_name]) }}">Back to Home Feed</a></p> --}}
                     </p>
                 </div>
+
 
                 <!-- Date Created & View Stat -->
                 <div class="flex items-center gap-2 text-gray-500 text-xs my-2">
@@ -289,7 +295,8 @@
                                         <!-- User Avatar -->
                                         <div class="flex-shrink-0">
                                             <img class="h-10 w-10 rounded-full object-cover"
-                                                src={{ $post->user->getFirstMediaUrl() }}" alt="{{ $comment->user->name }}.{{ $comment->user->lastname }} />
+                                                src="{{ $comment->user->getFirstMediaUrl() }}"
+                                                alt="{{ $comment->user->name }}" />
                                         </div>
                                         <!-- /User Avatar -->
                                         <!-- User Info -->

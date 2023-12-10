@@ -11,6 +11,15 @@
             <div class="flex gap-4 justify-center flex-col text-center items-center">
                 <!-- User Meta -->
                 <div class="flex gap-4 justify-center flex-col text-center items-center">
+
+                    <!-- Avatar -->
+                    <div class="relative">
+                        <img class="w-32 h-32 rounded-full border-2 border-gray-800"
+                            src="{{ auth()->user()->getFirstMediaUrl() }}" alt="{{ auth()->user()->name }}" />
+                        <!--            <span class="bottom-2 right-4 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>-->
+                    </div>
+                    <!-- /Avatar -->
+
                     <!-- User Meta -->
                     <div>
                         <h1 class="font-bold md:text-2xl">{{ $user->name }}</h1>
@@ -75,6 +84,28 @@
             <!-- Create Post Card Top -->
             <div>
                 <div class="flex items-start /space-x-3/">
+
+                    <!-- User Avatar -->
+                    {{-- <div class="flex-shrink-0">
+                <img class="h-10 w-10 rounded-full object-cover" src="{{ auth()->user()->getFirstMediaUrl() }}" alt="{{ auth()->user()->name }}" />
+            </div> --}}
+
+                    <div class="flex-shrink-0">
+                        @if (auth()->user()->getMedia()->isNotEmpty())
+                            <img class="h-10 w-10 rounded-full object-cover" src="{{ auth()->user()->getFirstMediaUrl() }}"
+                                alt="{{ auth()->user()->name }}" />
+                        @else
+                            <div
+                                class="h-10 w-10 flex items-center justify-center bg-gray-300 text-gray-600 rounded-full font-semibold">
+                                {{ substr(auth()->user()->name, 0, 1) . substr(auth()->user()->lastname, 0, 1) }}
+                            </div>
+                        @endif
+                    </div>
+
+
+
+                    <!-- /User Avatar -->
+
                     <!-- Content -->
 
                     <input type="hidden" name="user_id" value="{{ auth()->id() }}">
@@ -117,12 +148,23 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
                                     <!-- User Avatar -->
-                                    <!--                <div class="flex-shrink-0">-->
-                                    <!--                  <img-->
-                                    <!--                    class="h-10 w-10 rounded-full object-cover"-->
-                                    <!--                    src="https://avatars.githubusercontent.com/u/831997"-->
-                                    <!--                    alt="Tony Stark" />-->
-                                    <!--                </div>-->
+
+
+                                    <div class="flex-shrink-0">
+                                        @if (auth()->user()->getMedia()->isNotEmpty())
+                                            <img class="h-10 w-10 rounded-full object-cover"
+                                                src="{{ auth()->user()->getFirstMediaUrl() }}"
+                                                alt="{{ auth()->user()->name }}" />
+                                        @else
+                                            <div
+                                                class="h-10 w-10 flex items-center justify-center bg-gray-300 text-gray-600 rounded-full font-semibold">
+                                                {{ substr(auth()->user()->name, 0, 1) . substr(auth()->user()->lastname, 0, 1) }}
+                                            </div>
+                                        @endif
+                                    </div>
+
+
+
                                     <!-- /User Avatar -->
 
                                     <!-- User Info -->

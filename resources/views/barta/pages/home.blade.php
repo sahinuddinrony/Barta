@@ -154,7 +154,8 @@
                                   <div class="py-4 text-gray-700 font-normal space-y-2">
                                     <img
                                         src="{{ $post->getFirstMediaUrl() }}"
-                                        class="min-h-auto w-full rounded-lg max-h-64 md:max-h-72"
+                                        {{-- class="min-h-auto w-full rounded-lg max-h-64 md:max-h-72" --}}
+                                        class="min-h-auto w-full rounded-lg object-cover max-h-64 md:max-h-72"
                                         alt=""
                                     >
                                 </div>

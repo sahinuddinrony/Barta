@@ -11,6 +11,27 @@
             class="bg-white border-2 p-8 border-gray-800 rounded-xl min-h-[350px] space-y-8 flex items-center flex-col justify-center">
             <!-- Profile Info -->
             <div class="flex gap-4 justify-center flex-col text-center items-center">
+
+                 <!-- User Avatar -->
+                            <!--                <div class="flex-shrink-0">-->
+                            <!--                  <img-->
+                            <!--                    class="h-10 w-10 rounded-full object-cover"-->
+                            <!--                    src="https://avatars.githubusercontent.com/u/61485238"-->
+                            <!--                    alt="Al Nahian" />-->
+                            <!--                </div>-->
+
+                            <div class="relative">
+                                <img class="w-32 h-32 rounded-full border-2 border-gray-800"
+                                    src="{{  $userData->getFirstMediaUrl() }}" alt="{{$userData->name }}" />
+                                <!--            <span class="bottom-2 right-4 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>-->
+                            </div>
+
+                            {{-- <div class="py-4 text-gray-700 font-normal space-y-2">
+                                <img src="{{ $userData->getFirstMediaUrl() }}" alt=""
+                                    class="h-10 w-10 rounded-full object-cover" alt="">
+                            </div> --}}
+                            <!-- /User Avatar -->
+
                 <!-- User Meta -->
                 <div>
 
@@ -119,12 +140,12 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center space-x-3">
                                     <!-- User Avatar -->
-                                    <!--                <div class="flex-shrink-0">-->
-                                    <!--                  <img-->
-                                    <!--                    class="h-10 w-10 rounded-full object-cover"-->
-                                    <!--                    src="https://avatars.githubusercontent.com/u/831997"-->
-                                    <!--                    alt="Tony Stark" />-->
-                                    <!--                </div>-->
+                                                   <div class="flex-shrink-0">
+                                                    <img
+                                                       class="h-10 w-10 rounded-full object-cover"
+                                                     src="{{ $post->user->getFirstMediaUrl() }}"
+                                                        alt="" />
+                                                    </div>
                                     <!-- /User Avatar -->
 
                                     <!-- User Info -->
