@@ -15,4 +15,5 @@
             font-family: 'Inter', sans-serif;
         }
     </style>
+    @livewireStyles
 </head>

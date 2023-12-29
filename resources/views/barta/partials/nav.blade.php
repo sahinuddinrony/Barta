@@ -1,5 +1,14 @@
  <!-- Navigation -->
- <nav x-data="{ mobileMenuOpen: false, userMenuOpen: false }" class="bg-white shadow">
+ {{-- <nav x-data="{ mobileMenuOpen: false, userMenuOpen: false }" class="bg-white shadow"> --}}
+    <nav
+    x-data="{ mobileMenuOpen: false, userMenuOpen: false, isSticky: false }"
+    x-init="() => {
+        window.addEventListener('scroll', () => {
+            isSticky = window.scrollY > 0;
+        });
+    }"
+    :class="{ 'bg-white shadow fixed top-0 w-full z-50': isSticky, 'bg-white shadow': !isSticky }">
+    
      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
          <div class="flex h-16 justify-between">
              <div class="flex">

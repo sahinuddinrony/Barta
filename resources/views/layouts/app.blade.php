@@ -7,7 +7,7 @@
     <header>
        @include('barta.partials.nav')
     </header>
-
+    {{-- <livewire:home-feed /> --}}
     @yield('main_content')
     @yield('view_sigle_profile')
     @yield('view_sigle_post')
@@ -17,6 +17,8 @@
     @yield('edit_comment')
 
     @include('barta.partials.footer')
+
+    {{-- @livewireScripts --}}
 
 
 </body>
