@@ -3,11 +3,12 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Livewire\Attributes\On;
 
 class Notification extends Component
 {
-    // #[On('echo:post-react,ReactProcessed')]
-    // #[On('echo:post-comment,CommentProcessed')]
+    #[On('echo:post-react,ReactProcessed')]
+    #[On('echo:update-comment,CommentCreated')]
 
     public function render()
     {

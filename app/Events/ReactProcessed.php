@@ -2,7 +2,7 @@
 
 namespace App\Events;
 
-use App\Models\Comment;
+use App\Models\Like;
 use App\Models\Post;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
@@ -12,16 +12,18 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class CommentCreated implements ShouldBroadcast
+class ReactProcessed implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
      * Create a new event instance.
      */
-    public function __construct(public Comment $comment)
-    {
-        //
+    public function __construct(
+        public Post $post
+        // public Like $like
+    ){
+
     }
 
     /**
@@ -32,15 +34,7 @@ class CommentCreated implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new Channel('update-comment'),
+            new Channel('post-react'),
         ];
-
-        // Replace 'channel-name' with a meaningful channel name
-
-        // return [
-        //     new PrivateChannel('post-comments.' . $this->post->id),  // Use post ID for a unique channel
-        // ];
-
-
     }
 }
