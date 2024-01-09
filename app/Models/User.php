@@ -58,4 +58,9 @@ class User extends Authenticatable implements HasMedia
     {
         return $this->hasMany(Comment::class);
     }
+
+    // public function likedPosts()
+    // {
+    //     return $this->belongsToMany(Post::class, 'reacts')->withTimestamps();
+    // }
 }

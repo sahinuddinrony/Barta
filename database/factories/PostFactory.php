@@ -25,6 +25,7 @@ class PostFactory extends Factory
             // 'user_id' => $this->faker->randomNumber(),
             'description' => $this->faker->paragraph,
             'view_count' => $this->faker->randomNumber(),
+            'like_count' => $this->faker->randomNumber(),
             'created_at' => now(),
             'updated_at' => now(),
         ];

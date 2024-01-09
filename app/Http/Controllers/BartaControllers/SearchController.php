@@ -23,24 +23,23 @@ class SearchController extends Controller
             ->orWhere('username', 'like', "%$query%")
             ->orWhere('email', 'like', "%$query%")
             ->first();
-$id = $userData->id;
-            if($userData) {
-                // Eager load user's posts with user, comments, and comments.user information
-                $userPosts = Post::with(['user:id,name,username', 'comments', 'comments.user:id,name,username'])
-                    ->where('user_id', $userData->id)
-                    ->orderByDesc('created_at')
-                    ->get();
+        $id = $userData->id;
+        if ($userData) {
+            $userPosts = Post::with(['user:id,name,username', 'comments', 'comments.user:id,name,username'])
+                ->where('user_id', $userData->id)
+                ->orderByDesc('created_at')
+                ->get();
 
-                // Load user's comments
-                $userComments = Comment::where('user_id', $userData->id)->get();
+            // Load user's comments
+            $userComments = Comment::where('user_id', $userData->id)->get();
 
-                // Pass the data to the view
-                return view('barta.pages.profile.view_single_profile', compact('userData', 'userPosts', 'id', 'userComments'));
-                // return view('barta.pages.profile.profile', compact('user', 'userPosts', 'userComments'));
-            } else {
-                // Redirect to login if the user is not authenticated
-                return redirect()->route('login')->with('error', 'Please log in to view your profile.');
-            }
+            // Pass the data to the view
+            return view('barta.pages.profile.view_single_profile', compact('userData', 'userPosts', 'id', 'userComments'));
+            // return view('barta.pages.profile.profile', compact('user', 'userPosts', 'userComments'));
+        } else {
+            // Redirect to login if the user is not authenticated
+            return redirect()->route('login')->with('error', 'Please log in to view your profile.');
+        }
     }
 
     //     public function search(Request $request)

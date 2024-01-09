@@ -27,4 +27,14 @@ class Post extends Model implements HasMedia
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
+    // public function likers()
+    // {
+    //     return $this->belongsToMany(User::class, 'reacts')->withTimestamps();
+    // }
 }

@@ -1,14 +1,12 @@
  <!-- Navigation -->
  {{-- <nav x-data="{ mobileMenuOpen: false, userMenuOpen: false }" class="bg-white shadow"> --}}
-    <nav
-    x-data="{ mobileMenuOpen: false, userMenuOpen: false, isSticky: false }"
-    x-init="() => {
-        window.addEventListener('scroll', () => {
-            isSticky = window.scrollY > 0;
-        });
-    }"
-    :class="{ 'bg-white shadow fixed top-0 w-full z-50': isSticky, 'bg-white shadow': !isSticky }">
-    
+ <nav x-data="{ mobileMenuOpen: false, userMenuOpen: false, isSticky: false }" x-init="() => {
+     window.addEventListener('scroll', () => {
+         isSticky = window.scrollY > 0;
+     });
+ }"
+     :class="{ 'bg-white shadow fixed top-0 w-full z-50': isSticky, 'bg-white shadow': !isSticky }">
+
      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
          <div class="flex h-16 justify-between">
              <div class="flex">
@@ -41,11 +39,15 @@
 
 
                  <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <!-- Current: "border-gray-800 text-gray-900 font-semibold", Default: "border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-800" -->
-                    <a href="#" class="inline-flex items-center border-b-2 border-gray-800 px-1 pt-1 text-sm font-semibold text-gray-900">Discover</a>
-                    <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-800">For you</a>
-                    <a href="#" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-800">People</a>
-                  </div>
+                     <!-- Current: "border-gray-800 text-gray-900 font-semibold", Default: "border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-800" -->
+                     <a href="#"
+                         class="inline-flex items-center border-b-2 border-gray-800 px-1 pt-1 text-sm font-semibold text-gray-900">Discover</a>
+                     <a href="#"
+                         class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-800">For
+                         you</a>
+                     <a href="#"
+                         class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-600 hover:border-gray-300 hover:text-gray-800">People</a>
+                 </div>
 
 
 
@@ -54,59 +56,15 @@
              @include('barta.partials.search')
 
              <div class="hidden sm:ml-6 sm:flex gap-2 sm:items-center">
-                 <!-- This Button Should Be Hidden on Mobile Devices -->
-                 <!--              <button-->
-                 <!--                type="button"-->
-                 <!--                class="text-gray-900 hover:text-white border-2 border-gray-800 hover:bg-gray-900 focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center hidden md:block">-->
-                 <!--                Create Post-->
-                 <!--              </button>-->
-
-                 <!--              <button-->
-                 <!--                type="button"-->
-                 <!--                class="rounded-full bg-white p-2 text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">-->
-                 <!--                <span class="sr-only">View notifications</span>-->
-                 <!--                &lt;!&ndash; Heroicon name: outline/bell &ndash;&gt;-->
-                 <!--                <svg-->
-                 <!--                  class="h-6 w-6"-->
-                 <!--                  xmlns="http://www.w3.org/2000/svg"-->
-                 <!--                  fill="none"-->
-                 <!--                  viewBox="0 0 24 24"-->
-                 <!--                  stroke-width="1.5"-->
-                 <!--                  stroke="currentColor"-->
-                 <!--                  aria-hidden="true">-->
-                 <!--                  <path-->
-                 <!--                    stroke-linecap="round"-->
-                 <!--                    stroke-linejoin="round"-->
-                 <!--                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />-->
-                 <!--                </svg>-->
-                 <!--              </button>-->
-
-                 <!--              <button-->
-                 <!--                type="button"-->
-                 <!--                class="rounded-full bg-white p-2 text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">-->
-                 <!--                <span class="sr-only">Messages</span>-->
-                 <!--                <svg-->
-                 <!--                  xmlns="http://www.w3.org/2000/svg"-->
-                 <!--                  fill="none"-->
-                 <!--                  viewBox="0 0 24 24"-->
-                 <!--                  stroke-width="1.5"-->
-                 <!--                  stroke="currentColor"-->
-                 <!--                  class="w-6 h-6">-->
-                 <!--                  <path-->
-                 <!--                    stroke-linecap="round"-->
-                 <!--                    stroke-linejoin="round"-->
-                 <!--                    d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />-->
-                 <!--                </svg>-->
-                 <!--              </button>-->
+                 <button type="button"
+                     class="text-gray-900 hover:text-white border-2 border-gray-800 hover:bg-gray-900 focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center hidden md:block">
+                     Create Post
+                 </button>
 
 
-                 <button
-                 type="button"
-                 class="text-gray-900 hover:text-white border-2 border-gray-800 hover:bg-gray-900 focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center hidden md:block">
-                 Create Post
-               </button>
+                 {{-- <livewire:notification-bell /> --}}
 
-               <button
+                 {{-- <button
                  type="button"
                  class="rounded-full bg-white p-2 text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                  <span class="sr-only">View notifications</span>
@@ -124,25 +82,130 @@
                      stroke-linejoin="round"
                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
                  </svg>
-               </button>
+               </button> --}}
 
-               <button
-                 type="button"
-                 class="rounded-full bg-white p-2 text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                 <span class="sr-only">Messages</span>
-                 <svg
-                   xmlns="http://www.w3.org/2000/svg"
-                   fill="none"
-                   viewBox="0 0 24 24"
-                   stroke-width="1.5"
-                   stroke="currentColor"
-                   class="w-6 h-6">
-                   <path
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-                 </svg>
-               </button>
+
+                 <livewire:notification />
+
+
+                 {{-- <button type="button"
+                     class="relative rounded-full bg-white p-2 text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                     <span class="sr-only">View notifications</span>
+                     <!---- Heroicon name: outline/bell ---->
+                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                         <path stroke-linecap="round" stroke-linejoin="round"
+                             d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                     </svg> --}}
+
+                 {{-- @if ($notifications->count())
+                            <div
+                                class="px-1 absolute inline-flex items-center justify-center w-4 h-4 text-xs font-bold bg-red-500 border-2 border-white rounded-full -top-1 -end-2 dark:border-gray-900">
+                            </div>
+                            @endif --}}
+
+                 {{-- <div
+                         class="px-1 absolute inline-flex items-center justify-center w-4 h-4 text-xs font-bold bg-red-500 border-2 border-white rounded-full -top-1 -end-2 dark:border-gray-900">
+                         20
+                     </div> --}}
+
+
+                 {{-- @foreach ($notifications as $notification) --}}
+
+                 {{--  {{ gettype(json_decode($notification->data,true)) }}
+                     @dd(json_decode($notification->data,true)['message']) --}}
+                 {{-- {{ json_decode($notification->data,true)['message'] }}
+
+                     <ul>
+                        <li>{{json_decode($notification->data,true)['message']}}</li>
+                     </ul>
+
+                 @endforeach --}}
+
+
+                 {{-- @foreach (auth()->user()->unreadnotifications as $notification)
+                         <div class="p-6 bg-white border-b border-gray-200">
+                             <b>{{ $notification->data['name'] }} like your post !!!</b>
+                             <a href="{{ route('markasread', $notification->id) }}"
+                                 class="p-2 bg-red-400 text-white rounded-lg"> Mark as read</a>
+
+                         </div>
+                     @endforeach --}}
+
+                 {{-- </button> --}}
+
+
+
+
+
+
+                 {{-- <div class="relative">
+                    <button type="button" class="relative rounded-full bg-white p-2 text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2" onclick="toggleDropdown()">
+                        <span class="sr-only">View notifications</span>
+                        <!-- Heroicon name: outline/bell -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+
+                        <div class="px-1 absolute inline-flex items-center justify-center w-4 h-4 text-xs font-bold bg-red-500 border-2 border-white rounded-full -top-1 -end-2 dark:border-gray-900">
+                            200000
+                        </div>
+                    </button>
+
+                    <!-- Dropdown Menu (hidden by default) -->
+                    <div id="dropdown" class="hidden absolute mt-2 w-48 bg-white rounded-md shadow-lg">
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Item 1</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Item 2</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Item 3</a>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function toggleDropdown() {
+                        var dropdown = document.getElementById("dropdown");
+                        dropdown.classList.toggle("hidden");
+                    }
+                </script> --}}
+
+                 {{-- @php
+                        //echo gettype($notifications)
+                        print_r($notifications[0]['data']);
+                    @endphp
+                @foreach ($notifications as $notification)
+
+                    @php
+                        gettype($notification)
+                    @endphp --}}
+
+                 {{-- <div class="p-6 bg-white border-b border-gray-200">
+                         <b>{{ $notification->data->message }} like your post !!!</b>
+
+
+                     </div> --}}
+                 {{-- @endforeach --}}
+
+
+
+                 <!-- Tailwind Button with Badge -->
+                 {{-- <button type="button" class="px-4 py-2 mr-2 text-white bg-blue-500 rounded">
+                     Button
+                     <span class="px-2 py-1 text-sm text-black bg-white rounded-full">9000</span>
+                 </button> --}}
+
+
+
+
+                 <button type="button"
+                     class="rounded-full bg-white p-2 text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                     <span class="sr-only">Messages</span>
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="w-6 h-6">
+                         <path stroke-linecap="round" stroke-linejoin="round"
+                             d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                     </svg>
+                 </button>
 
 
                  <!-- Profile dropdown -->
@@ -155,14 +218,17 @@
                              {{-- <img class="h-8 w-8 rounded-full" src="{{ auth()->user()->getFirstMediaUrl() }}" alt="{{ auth()->user()->name }}" /> --}}
 
                              <div class="flex-shrink-0">
-                                @if (auth()->user()->getMedia()->isNotEmpty())
-                                    <img class="h-10 w-10 rounded-full object-cover" src="{{ auth()->user()->getFirstMediaUrl() }}" alt="{{ auth()->user()->name }}" />
-                                @else
-                                    <div class="h-10 w-10 flex items-center justify-center bg-blue-500 text-white rounded-full font-semibold">
-                                        {{ substr(auth()->user()->name, 0, 1) . substr(auth()->user()->lastname, 0, 1) }}
-                                    </div>
-                                @endif
-                            </div>
+                                 @if (auth()->user()->getMedia()->isNotEmpty())
+                                     <img class="h-10 w-10 rounded-full object-cover"
+                                         src="{{ auth()->user()->getFirstMediaUrl() }}"
+                                         alt="{{ auth()->user()->name }}" />
+                                 @else
+                                     <div
+                                         class="h-10 w-10 flex items-center justify-center bg-blue-500 text-white rounded-full font-semibold">
+                                         {{ substr(auth()->user()->name, 0, 1) . substr(auth()->user()->lastname, 0, 1) }}
+                                     </div>
+                                 @endif
+                             </div>
 
 
                          </button>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->text('description')->nullable();
             $table->unsignedInteger('view_count')->default(0);
+            $table->unsignedInteger('like_count')->default(0);
             $table->timestamps();
         });
     }

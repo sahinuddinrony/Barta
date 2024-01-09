@@ -2,6 +2,7 @@
 
 use App\Livewire\HomeFeed;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\BartaControllers\HomeController;
 use App\Http\Controllers\BartaControllers\PostController;
 use App\Http\Controllers\BartaControllers\UserController;
@@ -34,7 +35,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/search', [SearchController::class, 'search'])->name('search');
 
-    Route::get('/view/{postId}/single/post', [PostController::class, 'viewSinglePost'])->name('view_post');
+    Route::get('/posts/{postId}', [PostController::class, 'viewSinglePost'])->name('view_post');
     Route::post('/posts', [PostController::class, 'createPost'])->name('create_post');
     Route::get('/posts/{postId}/edit', [PostController::class, 'editPost'])->name('edit_post');
     Route::post('/posts/{postId}/update', [PostController::class, 'updatePost'])->name('update_post');
@@ -46,6 +47,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/comments/{commentId}/edit', [CommentController::class, 'editComment'])->name('edit_comment');
     Route::post('/comments/{commentId}/update', [CommentController::class, 'updateComment'])->name('update_comment');
     Route::get('/comments/{commentId}/delete', [CommentController::class, 'deleteComment'])->name('delete_comment');
+
+
+    // Route::get('/notify', [Notify::class, 'notify'])
+    // Route::get('/markasread/{id}', [Notify::class, 'markasread'])->name('markasread');
+
+    Route::get('/notifications', [NotificationController::class, 'showAllNotification'])->name('notifications');
+    Route::patch('/notifications/mark-as-read', [NotificationController::class, 'markAllAsRead'])->name('unread.notifications');
+    Route::get('/mark-as-read/{id}', [NotificationController::class, 'markAsRead'])->name('markAsRead');
 
 
 });

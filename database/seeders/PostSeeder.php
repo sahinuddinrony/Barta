@@ -11,6 +11,6 @@ class PostSeeder extends Seeder
     public function run()
     {
         // Generate and persist 10 fake posts
-        Post::factory(100)->create();
+        Post::factory(50)->create();
     }
 }

@@ -18,7 +18,13 @@ class HomeController extends Controller
         //     ->orderBy('created_at', 'desc')
         //     ->get();
 
-        return view('barta.pages.home');
+        $notifications = DB::table('notifications')->get();
+       /*  foreach($notifications as $notification){
+            $type = json_decode($notification->data,true);
+            // echo $type['message'];
+        } */
+
+        return view('barta.pages.home', ['notifications' => $notifications]);
     }
 
 }

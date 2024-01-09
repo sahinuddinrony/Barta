@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\BartaControllers;
 
+use App\Events\CommentCreated;
 use App\Models\Post;
 use App\Models\Comment;
 use Illuminate\Support\Str;
@@ -28,6 +29,8 @@ class PostController extends Controller
             'description' => $description,
             'view_count' => 0,
         ]);
+
+        // event(new CommentCreated($post));
 
         // Handle image upload
         if ($request->hasFile('image')) {

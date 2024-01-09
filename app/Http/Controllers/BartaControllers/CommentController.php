@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\Comment;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Events\CommentCreated;
 use App\Http\Controllers\Controller;
 
 class CommentController extends Controller
@@ -21,12 +22,13 @@ class CommentController extends Controller
     ]);
 
     // Assuming you have a form with a user_id & post_id input
+    // $userId = auth()->id(); // Get user ID from authenticated user
     $userId = $request->input('user_id');
     $postId = $request->input('post_id');
     $comment = $request->input('comment');
 
     // Insert the new comment into the database
-    $data = Comment::create([
+    $comment = Comment::create([
         'user_id' => $userId,
         'post_id' => $postId,
         'uuid' => Str::uuid(),
@@ -35,6 +37,8 @@ class CommentController extends Controller
         'created_at' => now(),
         'updated_at' => now(),
     ]);
+
+    event(new CommentCreated($comment));
 
     return redirect()->back()->with('success', 'Comment created successfully');
 }
