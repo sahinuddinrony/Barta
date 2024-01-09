@@ -39,3 +39,4 @@
   php artisan serve
   ```
 You need to create an API key in a project in [ably](https://ably.com/). Set it to `ABLY_KEY` in `.env` file.
+For more information on using the Ably maintained drivers [Ably Broadcaster for Laravel](https://github.com/ably/laravel-broadcaster)
