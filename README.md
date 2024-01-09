@@ -8,6 +8,8 @@
 
 ```bash
   composer install
+ npm install
+npm run dev
   ``` 
   
   > step 5: generate a new key
